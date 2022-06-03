@@ -1,0 +1,87 @@
+@import './variables';
+
+nav {
+    // outline: 5px solid black;
+    height: 10vh;
+    // overflow: hidden;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    background-color: $navbar-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav-brand, .nav-option {
+    color: $navtext-color;
+    text-decoration: none;
+}
+
+.nav-brand {
+    // outline: 3px solid blue;
+    font-family: $heading2-font;
+    font-size: 5vmin; //https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container
+    text-align: center;
+    padding: 1rem;
+}
+
+.nav-list {
+    list-style: none;
+    // outline: 3px solid green;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-content: center center;
+    gap: 2.5rem;
+    font-size: 2vmin;
+    padding: 2.5rem;
+    margin-top: 0;
+}
+
+.nav-option {
+    font-family: $heading1-font;
+}
+
+
+.hamburger-img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-btn {
+    display: inline-block;
+    max-width: 30px;
+    max-height: 30px;
+    // outline: 5px solid red;
+}
+
+// larger screen
+@media screen and (min-width: 785px) {
+    .menu-btn {
+        display: none;
+    }
+}
+
+// smaller screen
+@media screen and (max-width: 786px) {
+
+    nav {
+        grid-template-columns: 80% 20%;
+        place-items: center center;
+    }
+    .nav-brand {
+        font-size: 35px;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+}
+
+//even smaller screen
+@media screen and (max-width: 360px) {
+    .nav-brand {
+        font-size: 30px;
+    }
+}

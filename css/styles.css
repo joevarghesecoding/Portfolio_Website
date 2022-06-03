@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
+nav {
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  background-color: #657B83;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav-brand, .nav-option {
+  color: #EEE8D5;
+  text-decoration: none;
+}
+
+.nav-brand {
+  font-family: "Sacramento", sans-serif;
+  font-size: 5vmin;
+  text-align: center;
+  padding: 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: center center;
+  gap: 2.5rem;
+  font-size: 2vmin;
+  padding: 2.5rem;
+  margin-top: 0;
+}
+
+.nav-option {
+  font-family: "Ruda", Helvertica, sans-serif;
+}
+
+.hamburger-img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-btn {
+  display: inline-block;
+  max-width: 30px;
+  max-height: 30px;
+}
+
+@media screen and (min-width: 785px) {
+  .menu-btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 786px) {
+  nav {
+    grid-template-columns: 80% 20%;
+    place-items: center center;
+  }
+
+  .nav-brand {
+    font-size: 35px;
+  }
+
+  .nav-list {
+    display: none;
+  }
+}
+@media screen and (max-width: 360px) {
+  .nav-brand {
+    font-size: 30px;
+  }
+}
+.curly-heading, .main-heading {
+  color: #657B83;
+  font-size: 4vmax;
+  text-align: center;
+}
+
+.home-page {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.home-page-heading {
+  position: relative;
+  left: -15%;
+}
+
+.home-page-img {
+  max-width: 200vmin;
+  margin: 2.5rem;
+  justify-content: flex-end;
+}
+
+.home-page-img > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.curly-heading {
+  font-family: "Sacramento", sans-serif;
+}
+
+.main-heading {
+  font-family: "Ruda", Helvertica, sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.underline {
+  position: relative;
+  border-top: 1px solid #657B83;
+  width: 65%;
+  left: 40%;
+}
+
+#home-page-main-heading {
+  position: relative;
+  right: -20%;
+}
+
+@media screen and (max-width: 785px) {
+  .curly-heading, .main-heading {
+    font-size: 7vmin;
+    margin: 1.5rem auto;
+  }
+
+  .home-page {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .home-page-img {
+    margin: 1.5rem auto;
+  }
+
+  .home-page-heading {
+    margin: 2rem auto;
+    justify-content: center;
+    left: 0;
+  }
+
+  #home-page-main-heading {
+    right: 0;
+  }
+
+  .underline {
+    left: 20%;
+  }
+}

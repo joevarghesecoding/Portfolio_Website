@@ -1,0 +1,88 @@
+@import './variables';
+
+.curly-heading, .main-heading{
+    color: $navbar-color;
+    font-size: 4vmax;
+    text-align: center;
+}
+
+.home-page {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.home-page-heading{
+    position: relative;
+    left: -15%;
+}
+
+.home-page-img {
+    max-width: 200vmin;
+    margin: 2.5rem;
+    justify-content: flex-end;
+}
+
+.home-page-img > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.curly-heading{
+    font-family: $heading2-font;
+}
+
+.main-heading{
+    font-family: $heading1-font;    
+    margin-bottom: 0.5rem;
+}
+
+.underline {
+    position: relative;
+    border-top: 1px solid $navbar-color;
+    width: 65%;
+    left: 40%;
+}
+
+#home-page-main-heading {
+    position: relative;
+    right: -20%;
+}
+
+//even smaller screen
+
+//smaller screen
+@media screen and (max-width: 785px) {
+
+    .curly-heading, .main-heading{
+        font-size: 7vmin;
+        margin: 1.5rem auto;
+    }
+
+    .home-page{
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .home-page-img {
+        margin: 1.5rem auto;
+    }
+
+    .home-page-heading {
+        margin: 2rem auto;
+        justify-content: center;
+        left: 0;
+    }
+
+    #home-page-main-heading {
+        right: 0;
+    }
+
+    .underline {
+        left: 20%;
+    }
+   
+
+}
+
+//larger screen
