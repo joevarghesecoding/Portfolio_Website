@@ -5,7 +5,7 @@ body {
 }
 
 .scrolling-pc {
-    outline: 3px solid brown;
+    // outline: 3px solid brown;
     max-width: 100vmin;
     max-height: 100vmin;
 }
@@ -13,4 +13,8 @@ body {
 .pc-img{
     max-width: 100%;
     max-height: 100%;
+}
+
+section {
+    display: block;
 }

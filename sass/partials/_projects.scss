@@ -1,0 +1,42 @@
+@import './variables';
+
+.my-projects {
+    height: 100vh;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    place-items: center center;
+    margin: 10rem 2rem;
+}
+
+.project{
+    height: 200px;
+    width: 200px;
+    outline: 2px solid firebrick;
+    padding: 10rem auto 0 auto;
+}
+
+.click-me {
+    height: 50px;
+    width: 100px;
+    outline: 1px solid blueviolet;
+    margin: 0 auto;
+}
+
+.projects-grid > a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.click-me-text {
+    color: green;
+}
+
+.show-more {
+    height: 50px;
+    width: 100px;
+    border: 1px solid $navbar-color;
+}
