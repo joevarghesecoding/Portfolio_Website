@@ -4,6 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
 nav {
   height: 10vh;
   display: grid;
@@ -112,6 +114,7 @@ nav {
 .main-heading {
   font-family: "Ruda", Helvertica, sans-serif;
   margin-bottom: 0.5rem;
+  padding: 0;
 }
 
 .underline {
@@ -154,4 +157,91 @@ nav {
   .underline {
     left: 20%;
   }
+}
+.about-me {
+  outline: 5px solid black;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  place-items: space-evenly center;
+  height: 100vh;
+  margin-top: 5rem;
+}
+
+.right {
+  display: grid;
+  grid-template-rows: 20% 1% 19% 60%;
+}
+
+.left {
+  margin: auto 2rem;
+}
+
+.right > img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 3vh auto;
+}
+
+.p-text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #657B83;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 2.5;
+  margin: 5rem auto;
+  width: 85%;
+}
+
+#about-me-underline {
+  width: 20%;
+  top: -10%;
+}
+
+.right > h1 {
+  margin-top: 7rem;
+  font-size: 5vmin;
+}
+
+@media screen and (max-width: 900px) {
+  .about-me {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .right > h1 {
+    margin: 1vh;
+    font-size: 50px;
+  }
+
+  .p-text {
+    margin: 2rem auto;
+  }
+
+  .right > img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 1vh auto;
+  }
+
+  #about-me-underline {
+    left: 40%;
+    position: relative;
+    top: -290%;
+  }
+}
+body {
+  background-color: #FDF6E3;
+}
+
+.scrolling-pc {
+  outline: 3px solid brown;
+  max-width: 100vmin;
+  max-height: 100vmin;
+}
+
+.pc-img {
+  max-width: 100%;
+  max-height: 100%;
 }
