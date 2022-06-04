@@ -2,28 +2,40 @@
 
 .my-projects {
     height: 100vh;
+    display: grid;
+    grid-template-rows: 15% 1% 74% 10%;
+    grid-template-columns: 1fr 1fr; //added this
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    place-items: center center;
-    margin: 10rem 2rem;
+    gap: 4rem;
+   // place-items: center center;
+    margin: 1rem 2rem;
+
+    //adding here
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
-.project{
-    height: 200px;
-    width: 200px;
+.projects-grid > a:not(#show) {
     outline: 2px solid firebrick;
-    padding: 10rem auto 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+//adding here
+#my-projects-heading {
+    grid-column-start:1;
+    grid-column-end: 3;
 }
 
 .click-me {
-    height: 50px;
-    width: 100px;
+    height: 25%;
+    width: 40%;
     outline: 1px solid blueviolet;
-    margin: 0 auto;
+    margin: 10rem auto 0;
 }
 
 .projects-grid > a {
@@ -36,7 +48,37 @@
 }
 
 .show-more {
-    height: 50px;
-    width: 100px;
+    max-height: 50px;
+    max-width: 100px;
     border: 1px solid $navbar-color;
+    text-align: center;
+    padding: 0.5rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    margin: 0;
+}
+
+#show {
+    // background-color: red;
+    margin: 2rem 0;
+    padding: 0;
+    width: 100px;
+    height: 50px;
+    position: relative;
+    left: -18%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.show-more-text {
+    color: $navbar-color;
+    text-decoration: none;
+    text-align: center;
+}
+
+.my-projects-underline {
+    width: 20%;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
