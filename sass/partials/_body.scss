@@ -47,3 +47,14 @@ a {
     // left: 40%;
     
 }
+
+.left {
+    margin: auto 2rem;
+    //box-sizing: border-box;
+}
+
+.scrolling-pc {
+    position: fixed;
+    top: 40vh;
+    left: 0;
+}
