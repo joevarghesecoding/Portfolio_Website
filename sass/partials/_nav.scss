@@ -55,11 +55,45 @@ nav {
     // outline: 5px solid red;
 }
 
+.btn-pressed-nav-list {
+    display: grid;
+    grid-template-rows: repeat( 4 , 1fr);
+    height: 35vh;
+    width: 50vw;
+    background-color: $navbar-color;
+    text-decoration: none;
+    list-style: none;
+    justify-items: end;
+    position: fixed;
+    top: 8%;
+    right: 0;
+    padding: 0;
+    border: 0.5px solid black;
+}
+
+
+.btn-pressed-nav-option {
+    color: $bg-color;
+    grid-row: 1/5;
+    font-size: 25px;
+    font-family: $heading1-font;
+    
+}
+
+.btn-pressed-nav-item{
+    margin: 1rem auto; 
+}
+
 // larger screen
 @media screen and (min-width: 785px) {
     .menu-btn {
         display: none;
     }
+
+    .btn-pressed-nav {
+        display: none;
+    }
+  
 }
 
 // smaller screen
@@ -77,7 +111,12 @@ nav {
         display: none;
     }
 
+    .btn-pressed-nav{ 
+        display: none;
+    }
+
 }
+
 
 //even smaller screen
 @media screen and (max-width: 360px) {

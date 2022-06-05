@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jyothish's Portfolio Website</title>
     <link rel="stylesheet" href="css/styles.css">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
 	<script>
@@ -43,6 +43,32 @@
                 </li>
             </ul>
         </nav>
+
+        <div class="btn-pressed-nav">
+            <ul class="btn-pressed-nav-list">
+                <li class="btn-pressed-nav-item">
+                    <a href="#about-me" class="btn-pressed-nav-option">
+                        About
+                    </a>
+                </li>
+                <li class="btn-pressed-nav-item">
+                    <a href="#my-projects" class="btn-pressed-nav-option">
+                        Projects
+                    </a>
+                </li>
+                <li class="btn-pressed-nav-item">
+                    <a href="#my-resume" class="btn-pressed-nav-option">
+                        Resume
+                    </a>
+                </li>
+                <li class="btn-pressed-nav-item">
+                    <a href="#my-contacts" class="btn-pressed-nav-option">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
     </header>
 
     <main>
@@ -71,6 +97,7 @@
                     <img class="pc-img" src="./Splash/WebsiteImgs/1x/1x/Asset 1.png" alt="pc drawing that scrolls" />
                 </div>
             </div>
+
             <div class="right">
                  <!-- about me -->
                 <section class="about-me" id="about-me">
@@ -182,5 +209,15 @@
     <footer>
 
     </footer>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.menu-btn').click(function() {
+            $(".btn-pressed-nav").toggle();
+        });
+        });
+       
+    </script>
   </body>
 </html>
