@@ -1,11 +1,7 @@
-var left = $("#left");
 
-left.on("scroll", function(e) {
+
+$(document).ready(function() {
     
-  if (this.scrollTop > 1020) {
-    left.addClass("scrolling-pc");
-  } else {
-    left.removeClass("scrolling-pc");
-  }
+ $(".scrolling-pc").addClass("animated bounce");
   
 });
