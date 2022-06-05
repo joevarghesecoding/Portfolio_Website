@@ -43,7 +43,7 @@
                 </li>
             </ul>
         </nav>
-
+        <!-- button pressed nav -->
         <div class="btn-pressed-nav">
             <ul class="btn-pressed-nav-list">
                 <li class="btn-pressed-nav-item">
@@ -94,7 +94,7 @@
         <section class="big-screen">
             <div class="left" id="#left">
                 <div class="scrolling-pc">
-                    <img class="pc-img" src="./Splash/WebsiteImgs/1x/1x/Asset 1.png" alt="pc drawing that scrolls" />
+                    <img id="pc-img-id" class="pc-img" src="./Splash/WebsiteImgs/1x/1x/Asset 1.png" />
                 </div>
             </div>
 
@@ -221,7 +221,18 @@
                     $('.btn-pressed-nav').hide();
                 }
             })
-        });
+
+            });
+
+         $('.scrolling-pc').hide(0);   
+        $(window).scroll(function(){
+               if($(this).scrollTop()>650) {
+                   $('.scrolling-pc').show(1000);
+               }
+               else{
+                   $('.scrolling-pc').hide(1000);
+               }
+           })
         });
        
     </script>
