@@ -215,6 +215,12 @@
         $(document).ready(function() {
             $('.menu-btn').click(function() {
             $(".btn-pressed-nav").toggle();
+            
+            $(window).resize(function() {
+                if($(this).width() > 784){
+                    $('.btn-pressed-nav').hide();
+                }
+            })
         });
         });
        
