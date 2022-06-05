@@ -8,6 +8,7 @@ body {
     // outline: 3px solid brown;
     max-width: 100vmin;
     max-height: 100vmin;
+    grid-area: main;
 }
 
 .pc-img{
@@ -21,4 +22,28 @@ section {
 
 a {
     text-decoration: none;
+}
+
+.curly-heading, .main-heading{
+    color: $navbar-color;
+    font-size: 3vmax;
+    text-align: center;
+}
+
+.curly-heading{
+    font-family: $heading2-font;
+}
+
+.main-heading{
+    font-family: $heading1-font;    
+    margin-bottom: 0.5rem;
+    padding: 0;
+}
+
+.underline {
+    // position: relative;
+    border-top: 1px solid $navbar-color;
+    width: 50%;
+    // left: 40%;
+    
 }
