@@ -272,6 +272,9 @@
     </script>
     <script>
         $(document).ready(function() {
+
+            $('.scrolling-pc').hide();  
+            $('.scrolling-pc-portrait').hide();
             // menu button
             $('.menu-btn').click(function() {
             $(".btn-pressed-nav").toggle();
@@ -285,19 +288,18 @@
             });
 
             // scrolling pc : https://tutorialdeep.com/knowhow/show-hide-image-on-scroll-down-jquery/
-         $('.scrolling-pc').hide(0);  
-         $('.scrolling-pc-portrait').hide(0);
-        $(window).scroll(function(){
-                var $width = $(window).width();
-                console.log('width : ' + $width );
-               if($(this).scrollTop()>650 && $width > 1050) {
-                   $('.scrolling-pc').show(400);
-               }
-               //else if when width is correcet for portrait mode
-               else{
-                   $('.scrolling-pc').hide(1000);
-               }
-           });
+            
+            $(window).scroll(function(){
+                    var $width = $(window).width();
+                    console.log('width : ' + $width );
+                if($(this).scrollTop()>650 && $width > 1050) {
+                    $('.scrolling-pc').show(400);
+                }
+                //else if when width is correcet for portrait mode
+                else{
+                    $('.scrolling-pc').hide(1000);
+                }
+            });
 
            $(window).resize(function(){
             location.reload();
@@ -319,7 +321,20 @@
                 $('.my-contact').show();
            }
 
-           
+           if($(window).scroll(function(){
+               var $scroll = $(window).scrollTop();
+               console.log('scroll : ' + $scroll);
+               if($(window).width() <= 1050){
+                   if($scroll > 0 && $scroll < 100){
+                       $('.home-page').css("margin-top", "15rem").show().appendTo('.viewer');    
+                   }
+                   if($scroll >=300 && $scroll < 700){
+                       $('.home-page').hide();
+                       //$('.viewer').removeClass('.home-page');
+                       $('.about-me').css("margin-top", '15rem').show().appendTo('.viewer');
+                   }
+               }
+           }));
         });
 
     
