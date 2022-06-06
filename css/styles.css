@@ -12,6 +12,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
 nav {
   height: 10vh;
   display: grid;
@@ -248,47 +250,19 @@ nav {
   align-self: end;
 }
 
-@media screen and (max-width: 900px) {
-  .about-me {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .right > h1 {
-    margin: 1vh;
-    font-size: 50px;
-  }
-
-  .p-text {
-    margin: 2rem auto;
-  }
-
-  .right > img {
-    max-width: 100%;
-    max-height: 100%;
-    margin: 1vh auto;
-  }
-
-  #about-me-underline {
-    left: 40%;
-    position: relative;
-    top: -290%;
-  }
-}
 body {
   background-color: #FDF6E3;
 }
 
 .scrolling-pc {
-  max-width: 100vmin;
-  max-height: 100vmin;
-  grid-area: main;
+  max-width: 60vmax;
+  max-height: 65vmax;
+  grid-column: 1/3;
 }
 
 .pc-img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 85%;
+  max-height: 85%;
 }
 
 section {
@@ -322,6 +296,8 @@ a {
 
 .left {
   margin: auto 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .right {
@@ -484,4 +460,45 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
+}
+
+@media screen and (max-width: 1050px) {
+  .viewer {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .big-screen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .left {
+    display: block;
+    grid-column: 1/4;
+  }
+
+  .scrolling-pc-portrait {
+    position: fixed;
+    right: 15%;
+    left: 25%;
+    bottom: 5%;
+  }
+
+  .pc-img {
+    width: 75%;
+    height: 75%;
+  }
+
+  .right {
+    grid-column: 1/4;
+  }
+
+  #about-me-heading {
+    font-size: 5vw;
+  }
+
+  #about-me-underline {
+    grid-column: 1/4;
+  }
 }

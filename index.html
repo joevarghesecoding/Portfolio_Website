@@ -73,6 +73,10 @@
 
     <main>
         <!-- home page -->
+        <section class="viewer" id="viewer">
+
+        </section>
+
         <section class="home-page" id="home-page">
           
             <div class="home-page-img">
@@ -94,7 +98,11 @@
         <section class="big-screen">
             <div class="left" id="#left">
                 <div class="scrolling-pc">
-                    <img id="pc-img-id" class="pc-img" src="./Splash/WebsiteImgs/1x/1x/Asset 1.png" />
+                    <img id="pc-img-id" class="pc-img" src="./Splash/WebsiteImgs/1x/1x/new-scrolling-pc.png" />
+                </div>
+
+                <div class="scrolling-pc-portrait">
+                    <img id="pc-img-id-portait" class="pc-img" src="./Splash/WebsiteImgs/1x/1x/new-scrolling-pc.png" />
                 </div>
             </div>
 
@@ -170,12 +178,30 @@
                 </section>
 
                 <!-- resume -->
+                <!-- adding pdf.js tutorial : https://code.tutsplus.com/tutorials/how-to-create-a-pdf-viewer-in-javascript--cms-32505 -->
                 <section class="my-resume" id="my-resume">
                     <h1 class="main-heading" id="my-resume-heading">
                         Resume
                     </h1>
                     <div class="underline my-resume-underline"></div>
-                    <div class="resume-container"></div>
+                    <div class="resume-container" id="my-pdf-viewer">
+                        <div id="canvas-container">
+                            <canvas id="pdf-renderer">
+
+                            </canvas>
+
+                            <div id="navigation-controls">
+                                <button id="go-previous">Previous</button>
+                                <input id="current-page" value="1" type="number">
+                                <button id="go-next">Next</button>
+                            </div>
+
+                            <div id="zoom-controls">
+                                <button id="zoom-in">+</button>
+                                <button id="zoom-out">-</button>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- contact -->
@@ -210,9 +236,43 @@
 
     </footer>
 
+    <!-- scripts -->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js">
+    </script>
+    <script>
+        var myState= {
+            pdf: null,
+            currentPage: 1,
+            zoom: 1
+        }
 
+        pdfjsLib.getDocument('./JyothishJoeVargheseSEResume.pdf').then((pdf) => {
+            myState.pdf = pdf;
+            render();
+        });
+
+        function render() {
+            myState.pdf.getPage(myState.currentPage).then((page) => {
+
+                var canvas = document.getElementById("pdf-renderer");
+                var ctx= canvas.getContext('2d');
+
+                var viewport = page.getViewport(myState.zoom);
+
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+
+                page.render({
+                    canvasContext: ctx,
+                    viewport: viewport
+                });
+            });
+        }
+    </script>
     <script>
         $(document).ready(function() {
+            // menu button
             $('.menu-btn').click(function() {
             $(".btn-pressed-nav").toggle();
             
@@ -224,16 +284,46 @@
 
             });
 
-         $('.scrolling-pc').hide(0);   
+            // scrolling pc : https://tutorialdeep.com/knowhow/show-hide-image-on-scroll-down-jquery/
+         $('.scrolling-pc').hide(0);  
+         $('.scrolling-pc-portrait').hide(0);
         $(window).scroll(function(){
-               if($(this).scrollTop()>650) {
-                   $('.scrolling-pc').show(1000);
+                var $width = $(window).width();
+                console.log('width : ' + $width );
+               if($(this).scrollTop()>650 && $width > 1050) {
+                   $('.scrolling-pc').show(400);
                }
+               //else if when width is correcet for portrait mode
                else{
                    $('.scrolling-pc').hide(1000);
                }
-           })
+           });
+
+           $(window).resize(function(){
+            location.reload();
+           });
+
+           if($(window).width() <= 1050)
+           {
+               $('.home-page').hide();
+               $('.about-me').hide();
+                $('.my-projects').hide();
+                $('.my-resume').hide();
+                $('.my-contact').hide();
+           }
+           else if($(window).width() > 1050){
+               $('.home-page').show();
+               $('.about-me').show();
+                $('.my-projects').show();
+                $('.my-resume').show();
+                $('.my-contact').show();
+           }
+
+           
         });
+
+    
+
        
     </script>
   </body>
