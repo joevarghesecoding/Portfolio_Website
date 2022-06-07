@@ -73,10 +73,7 @@
 
     <main>
         <!-- home page -->
-        <section class="viewer" id="viewer">
-
-        </section>
-
+    
         <section class="home-page" id="home-page">
           
             <div class="home-page-img">
@@ -99,10 +96,6 @@
             <div class="left" id="#left">
                 <div class="scrolling-pc">
                     <img id="pc-img-id" class="pc-img" src="./Splash/WebsiteImgs/1x/1x/new-scrolling-pc.png" />
-                </div>
-
-                <div class="scrolling-pc-portrait">
-                    <img id="pc-img-id-portait" class="pc-img" src="./Splash/WebsiteImgs/1x/1x/new-scrolling-pc.png" />
                 </div>
             </div>
 
@@ -229,6 +222,137 @@
             </div>
         </section>
 
+        <section class="big-screen-portrait">
+            <!-- about me portrait -->
+             <section class="about-me-portrait" id="about-me-portrait">
+                <h1 class="main-heading" id="about-me-heading-portrait">
+                    About Me
+                </h1>
+                <div class="underline" id="about-me-underline-portrait"></div>
+                <img src="./Splash/WebsiteImgs/1x/face-pic.png" alt="pic of my face" id="my-pic-portrait"/>
+                <p class="about-me-text-portrait p-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, hic. Eligendi officia repellat obcaecati aliquam, deserunt temporibus cupiditate molestias quasi ipsam? Autem dicta perspiciatis sequi aliquid inventore repudiandae, doloremque hic.
+                </p>
+                <div class="stationary-pc" id="pc-img-id-about">
+                    <img class="stationary-pc-img" src="./Splash/WebsiteImgs/1x/1x/new-scrolling-pc.png" />
+                </div>
+            </section>
+
+            <!-- projects portrait -->
+            <section class="my-projects-portrait" id="my-projects-portrait">
+                <h1 class="main-heading" id="my-projects-heading-portrait">
+                    Projects
+                </h1>
+                <div class="underline my-projects-underline-portrait"></div>
+                <div class="projects-grid-portrait">
+                    
+                        <div class="project-portrait">
+                            <div class="click-me">
+                                <a href="#" target="_blank">
+                                <span class="click-me-text">
+                                    Click Me
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                   
+                        <div class="project-portrait">
+                            <div class="click-me">
+                                <a href="#" target="_blank">
+                                <span class="click-me-text">
+                                    Click Me
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                    
+                        <div class="project-portrait">
+                            <div class="click-me">
+                                <a href="#" target="_blank">
+                                <span class="click-me-text">
+                                    Click Me
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                    
+                        <div class="project-portrait">
+                            <div class="click-me">
+                                <a href="#" target="_blank">
+                                <span class="click-me-text">
+                                    Click Me
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                  
+                </div>
+                
+                    <a href="#" target="_blank" id="show-portrait">
+                        <div class="show-more">
+                            <span class="show-more-text">Show More</span>
+                        </div>
+                    </a>
+                
+                    <div class="stationary-pc" id="pc-img-id-projects">
+                        <img  class="stationary-pc-img" src="./Splash/WebsiteImgs/1x/1x/new-scrolling-pc.png" />
+                    </div>
+
+            </section>
+
+            <!-- resume -->
+            <section class="my-resume-portrait" id="my-resume-portrait">
+                <h1 class="main-heading" id="my-resume-heading-portrait">
+                    Resume
+                </h1>
+                <div class="underline my-resume-underline-portrait"></div>
+                <div class="resume-container-portrait" id="my-pdf-viewer">
+                    <div id="canvas-container">
+                        <canvas id="pdf-renderer">
+
+                        </canvas>
+
+                        <div id="navigation-controls">
+                            <button id="go-previous">Previous</button>
+                            <input id="current-page" value="1" type="number">
+                            <button id="go-next">Next</button>
+                        </div>
+
+                        <div id="zoom-controls">
+                            <button id="zoom-in">+</button>
+                            <button id="zoom-out">-</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stationary-pc" id="pc-img-id-resume">
+                    <img  class="stationary-pc-img" src="./Splash/WebsiteImgs/1x/1x/new-scrolling-pc.png" />
+                </div>
+            </section>
+
+            <!-- contact -->
+            <section class="my-contact-portrait" id="#my-contact-portrait">
+                <h1 class="main-heading" id="my-contact-heading-portrait">
+                    Contact
+                </h1>
+                <div class="underline my-contact-underline"></div>
+                <div class="contacts-container-portrait">
+                    <a href="#" target="_blank">
+                        <img src="./Splash/WebsiteImgs/github-brands.svg" class="contacts-img" alt="github icon">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="./Splash/WebsiteImgs/linkedin-brands.svg" class="contacts-img" alt="linkedin icon">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="./Splash/WebsiteImgs/envelope-solid.svg" class="contacts-img" alt="email icon">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="./Splash/WebsiteImgs/phone-solid.svg" class="contacts-img" alt="phone icon">
+                    </a> 
+                    
+                </div>
+            </section>
+        </section>
         
     </main>
 
@@ -307,34 +431,31 @@
 
            if($(window).width() <= 1050)
            {
-               $('.home-page').hide();
-               $('.about-me').hide();
-                $('.my-projects').hide();
-                $('.my-resume').hide();
-                $('.my-contact').hide();
+               $('.big-screen').hide();
+               $('.big-screen-portrait').show();
+               $('.scolling-pc').hide();
            }
            else if($(window).width() > 1050){
-               $('.home-page').show();
-               $('.about-me').show();
-                $('.my-projects').show();
-                $('.my-resume').show();
-                $('.my-contact').show();
+                $('.big-screen').show();
+               $('.big-screen-portrait').hide();
+               $('.scolling-pc').show();
            }
 
-           if($(window).scroll(function(){
-               var $scroll = $(window).scrollTop();
-               console.log('scroll : ' + $scroll);
-               if($(window).width() <= 1050){
-                   if($scroll > 0 && $scroll < 100){
-                       $('.home-page').css("margin-top", "15rem").show().appendTo('.viewer');    
-                   }
-                   if($scroll >=300 && $scroll < 700){
-                       $('.home-page').hide();
-                       //$('.viewer').removeClass('.home-page');
-                       $('.about-me').css("margin-top", '15rem').show().appendTo('.viewer');
-                   }
-               }
-           }));
+        //    if($(window).scroll(function(){
+        //        var $scroll = $(window).scrollTop();
+        //        console.log('scroll : ' + $scroll);
+        //        if($(window).width() <= 1050){
+        //            if($scroll > 0 ){
+        //                $('.home-page').css("margin-top", "35rem").show().appendTo('.viewer');    
+        //            }
+        //            if($scroll >=300 && $scroll < 700){
+        //                $('.home-page').hide();
+        //                //$('.viewer').removeClass('.home-page');
+        //                $('.about-me').css("margin-top", '15rem').show().appendTo('.viewer');
+        //            }
+        //            //continue adding
+        //        }
+        //    }));
         });
 
     
