@@ -1,3 +1,4 @@
+//nav button code
 
 $(document).ready(function() {
 
@@ -47,5 +48,25 @@ $(document).ready(function() {
 
 });
 
+
+//nav blur upon scrolling
+
+$(document).ready(function() {
+    const nav = document.querySelector('nav');
+    const brand = document.querySelector('.nav-brand');
+    const nav_list = document.querySelector('.nav-list');
+    let lastScrollPos = 0;
+    window.addEventListener('scroll', function() {
+        lastScrollPos = window.scrollY;
+        console.log(lastScrollPos);
+        if(lastScrollPos > 600){
+            nav.style.backgroundColor = 'rgba(101, 123, 131, 0.7)';
+            nav.style.transition = 'background-color 1s ease';
+        }
+        else {
+            nav.style.backgroundColor = 'rgb(101, 123, 131)';
+        }
+    })
+});
 
 //RESUME

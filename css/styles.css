@@ -15,6 +15,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Radio+Canada&family=Roboto+Flex:opsz,wght@8..144,300&family=Ruda:wght@500&family=Smooch&family=Space+Grotesk:wght@300&display=swap");
 nav {
+  outline: 2px solid #657B83;
   height: 10vh;
   display: grid;
   grid-template-columns: 55% 45%;
