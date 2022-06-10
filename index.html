@@ -7,6 +7,7 @@
     <title>Jyothish's Portfolio Website</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
 	<script>
@@ -108,7 +109,7 @@
                     <div class="underline" id="about-me-underline"></div>
                     <img src="./Splash/WebsiteImgs/1x/face-pic.png" alt="pic of my face" id="my-pic"/>
                     <p class="about-me-text p-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, hic. Eligendi officia repellat obcaecati aliquam, deserunt temporibus cupiditate molestias quasi ipsam? Autem dicta perspiciatis sequi aliquid inventore repudiandae, doloremque hic.
+                        Hi, I'm Joe, an aspiring Software Engineer. Ever since I was little, I was in love with computers. But only after growing up did I learn the amazing things they are capable of. I am learning day by day what their limits are, and in effect broadening my own.
                     </p>
                 </section>
                 
@@ -231,7 +232,7 @@
                 <div class="underline" id="about-me-underline-portrait"></div>
                 <img src="./Splash/WebsiteImgs/1x/face-pic.png" alt="pic of my face" id="my-pic-portrait"/>
                 <p class="about-me-text-portrait p-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, hic. Eligendi officia repellat obcaecati aliquam, deserunt temporibus cupiditate molestias quasi ipsam? Autem dicta perspiciatis sequi aliquid inventore repudiandae, doloremque hic.
+                    Hi, I'm Joe, an aspiring Software Engineer. Ever since I was little, I was in love with computers. But only after growing up did I learn the amazing things they are capable of. I am learning day by day what their limits are, and in effect broadening my own.
                 </p>
                 <div class="stationary-pc" id="pc-img-id-about">
                     <img class="stationary-pc-img" src="./Splash/WebsiteImgs/1x/1x/new-scrolling-pc.png" />
@@ -395,68 +396,53 @@
         }
     </script>
     <script>
-        $(document).ready(function() {
+        // $(document).ready(function() {
 
-            $('.scrolling-pc').hide();  
-            $('.scrolling-pc-portrait').hide();
-            // menu button
-            $('.menu-btn').click(function() {
-            $(".btn-pressed-nav").toggle();
+        //     $('.scrolling-pc').hide();  
+        //     $('.scrolling-pc-portrait').hide();
+        //     // menu button
+        //     $('.menu-btn').click(function() {
+        //     $(".btn-pressed-nav").toggle();
             
-            $(window).resize(function() {
-                if($(this).width() > 784){
-                    $('.btn-pressed-nav').hide();
-                }
-            })
+        //     $(window).resize(function() {
+        //         if($(this).width() > 784){
+        //             $('.btn-pressed-nav').hide();
+        //         }
+        //     })
 
-            });
+        //     });
 
-            // scrolling pc : https://tutorialdeep.com/knowhow/show-hide-image-on-scroll-down-jquery/
+        //     // scrolling pc : https://tutorialdeep.com/knowhow/show-hide-image-on-scroll-down-jquery/
             
-            $(window).scroll(function(){
-                    var $width = $(window).width();
-                    console.log('width : ' + $width );
-                if($(this).scrollTop()>650 && $width > 1050) {
-                    $('.scrolling-pc').show(400);
-                }
-                //else if when width is correcet for portrait mode
-                else{
-                    $('.scrolling-pc').hide(1000);
-                }
-            });
+        //     $(window).scroll(function(){
+        //             var $width = $(window).width();
+        //             console.log('width : ' + $width );
+        //         if($(this).scrollTop()>650 && $width > 1050) {
+        //             $('.scrolling-pc').show(400);
+        //         }
+        //         //else if when width is correcet for portrait mode
+        //         else{
+        //             $('.scrolling-pc').hide(1000);
+        //         }
+        //     });
 
-           $(window).resize(function(){
-            location.reload();
-           });
+        //    $(window).resize(function(){
+        //     location.reload(2000);
+        //    });
 
-           if($(window).width() <= 1050)
-           {
-               $('.big-screen').hide();
-               $('.big-screen-portrait').show();
-               $('.scolling-pc').hide();
-           }
-           else if($(window).width() > 1050){
-                $('.big-screen').show();
-               $('.big-screen-portrait').hide();
-               $('.scolling-pc').show();
-           }
+        //    if($(window).width() <= 1050)
+        //    {
+        //        $('.big-screen').hide();
+        //        $('.big-screen-portrait').show();
+        //        $('.scolling-pc').hide();
+        //    }
+        //    else if($(window).width() > 1050){
+        //         $('.big-screen').show();
+        //        $('.big-screen-portrait').hide();
+        //        $('.scolling-pc').show();
+        //    }
 
-        //    if($(window).scroll(function(){
-        //        var $scroll = $(window).scrollTop();
-        //        console.log('scroll : ' + $scroll);
-        //        if($(window).width() <= 1050){
-        //            if($scroll > 0 ){
-        //                $('.home-page').css("margin-top", "35rem").show().appendTo('.viewer');    
-        //            }
-        //            if($scroll >=300 && $scroll < 700){
-        //                $('.home-page').hide();
-        //                //$('.viewer').removeClass('.home-page');
-        //                $('.about-me').css("margin-top", '15rem').show().appendTo('.viewer');
-        //            }
-        //            //continue adding
-        //        }
-        //    }));
-        });
+        // });
 
     
 
